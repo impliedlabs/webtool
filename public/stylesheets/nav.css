@@ -63,8 +63,8 @@ background-position:0 50% !important;
 
 ul.nav li:hover a,
 ul.nav li a:hover,
-ul.nav li a:focus {color:#fff; background:#941812; -mozborder-radius: 5px; border-radius: 5px; }
-ul.nav li a:active {color:#666; background:#fff;}
+ul.nav li a:focus {text-decoration:underline;}
+ul.nav li a:active {color:#666; background:#fff; text-decoration:underline;}
 ul.nav li:hover ul {left:0;z-index:10}
 ul.nav li ul,
 ul.nav li {background:#ccc !important}

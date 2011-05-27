@@ -27,7 +27,7 @@ font-family: 'Droid Sans', arial, serif;
 /* anchors
 ----------------------------------------------- */
 a {
-color:#920000;
+color: #000214; /*#920000;*/
 
 text-decoration: none;
 }
@@ -385,7 +385,14 @@ background: linear-gradient(top, #606c88 0%,#3f4c6b 100%); /* W3C */
 width: 150px;
 padding: 10px;
 color: #fff;
-background: #000;
+background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top, #45484d 23%, #000000 69%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(23%,#45484d), color-stop(69%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #45484d 23%,#000000 69%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #45484d 23%,#000000 69%); /* Opera11.10+ */
+background: -ms-linear-gradient(top, #45484d 23%,#000000 69%); /* IE10+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+background: linear-gradient(top, #45484d 23%,#000000 69%); /* W3C */adient(top, #45484d 0%,#000000 100%); /* W3C */
 font-weight: bold;
 -moz-border-radius: 5px;
 border-radius: 5px;
