@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<div id="org_details">
+
+	<div class = "right">
+
+		<b> Affiliated Practitioners </b>
+		<% @indivs.each do |indiv| %>
+				<p><%= link_to "#{indiv.first}," + " " + "#{indiv.last}", indiv_path(indiv) %> </p>
+		<% end %>
+	
+
+	</div>
+	
+	<p>
+	  <b>Hms POID:</b>
+	  <%= @org.hms_poid %>
+
+	</p>
+	
+	<p>
+
+	  <b>Orginization Name:</b>
+	  <%= @org.orgname %>
+	</p>
+
+
+
+	<p>
+	  <b>Address1:</b>
+	  <%= @org.address1 %>
+
+
+
+	  <b>Address2:</b>
+	  <%= @org.address2 %>
+	</p>
+
+	<p>
+	  <b>City:</b>
+	  <%= @org.city %>
+
+
+
+	  <b>State:</b>
+	  <%= @org.state %>
+	</p>
+
+	<p>
+	  <b>Zipcode:</b>
+	  <%= @org.zipcode %>
+	</p>
+
+	<p>
+	  <b>Phone:</b>
+	  <%= @org.phone %>
+	</p>
+
+
+	<table width="40%">
+		<tr>
+			<td>Hypo Rank </td>
+			<td> <%= @org.org_bucket_1_rank %> </td>
+		</tr>
+		<tr>
+			<td>Ortho </td>
+			<td> <%= @org.org_bucket_2_rank %> </td>
+		</tr>
+			<td>Liver Rank </td>
+			<td> <%= @org.org_bucket_3_rank %> </td>
+		<tr>
+			<td>Cancer Rank </td>
+			<td> <%= @org.org_bucket_4_rank %> </td>
+		</tr>
+			
+	</table>
+
+	<%= link_to 'Back', orgs_path %>
+
+</div>

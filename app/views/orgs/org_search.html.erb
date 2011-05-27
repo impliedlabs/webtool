@@ -1,0 +1,8 @@
+<% form_tag orgs_path, :method => 'get', :id => "orgs_search" do %>
+	<%= hidden_field_tag :direction, params[:direction] %>  
+	<%= hidden_field_tag :sort, params[:sort] %>
+	<p>
+		<%= text_field_tag :search, params[:search], :id => "search_bar"%>
+		<input type = "submit" value="Search" class="button_dark_blue">
+	</p>
+<% end %>

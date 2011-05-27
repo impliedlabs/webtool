@@ -1,0 +1,5 @@
+test1@yahoo.com	icecream	10
+test2@yahoo.com	icecream	20
+test3@yahoo.com	icecream	30
+rsd@yahoo.com	icecream	40
+nsd@yahoo.com	icecream	50

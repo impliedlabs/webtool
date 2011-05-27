@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>HMS WebTool</title>
+
+<%= stylesheet_link_tag :all %>
+<%= javascript_include_tag :all %>
+<%= csrf_meta_tag %>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/css/ie6.css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen" /><![endif]-->
+</head>
+
+<body>
+
+
+<!-- Begin Container -->
+<div class="container_12">
+
+	<div class="grid_12">
+		<div id="header">
+
+					
+
+			<ul class="nav">
+				<li><a href="/"> Home </a> </li>
+				<li><a href="/indivs"> Individuals </a> </li>
+				<li><a href="/orgs"> Orgs </a> </li>
+				<li><a href=""> Help </a> </li>
+				
+				
+			</ul>
+		
+				
+			<h1 id="branding">
+				<%= image_tag('hms_logo.gif') %> 
+				
+			
+				
+			</h1>
+		
+					<div class="right" style="font-size: 12px;">
+				<% if user_signed_in? %>  
+							Signed in as <%= current_user.email %>.  
+							<%= link_to "Sign out", destroy_user_session_path %>  
+						  <% else %>  
+							<p> </p>  
+					<% end %>  
+				</div>	
+		</div>
+				
+</div>
+
+
+
+<!--begin main -->
+<div id="main">
+	
+	<!-- user nav -->
+
+		
+	<!-- main content -->
+	<div class="grid_8">
+		<div id="content">
+			<p class= "notice"> <%= notice %> </p>
+			<p class="alert"> <%= alert %>  </p>
+			<%= yield %>
+		</div>
+	</div>
+		
+	<!-- sidebar -->
+		<div class="grid_4">
+			<div id="sidebar">
+			
+			<%= render 'indiv_search' %>
+			
+			<div id = "links" class = "right">
+				<%= link_to "Advanced Search", indivs_path %>  
+				</p>
+				<p>
+				<%= link_to "Territories", indivs_path %> 
+			
+				</p>
+				<p>
+				<%= link_to "Stats/Reports", orgs_path %>
+				</p>
+				<p>
+				<%= link_to "Account Settings", edit_user_registration_path %>
+				</p>
+			</div>
+		</div>
+	
+	
+</div>
+	
+
+
+</div>
+
+
+
+
+<div class="clear"></div>
+
+
+<!--end of hidden divs displaying column sizes. Begin templates and prototypes for forms, accordions, jquery, etc -->
+
+
+<!-- begin footer -->
+<div class="grid_12" id="site_info">
+	
+	
+<div class="box">
+	<p>Copyright 2010 HealthMarket Science </p>
+\
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<%= yield :scripts %>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.js"></script>
+<script type="text/javascript" src="js/jquery-fluid16.js"></script>
+</body>
+</html>

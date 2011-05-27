@@ -1,0 +1,31 @@
+<table id="indivs_table">
+  <tr>
+    <th><%= sortable "orgname", "Organization" %></th>
+    <th><%= sortable "org_bucket_1_rank", "Hypo Rank"%></th>
+    <th><%= sortable  "org_bucket_2_rank", "Ortho Rank"%></th>
+    <th><%= sortable  "org_bucket_3_rank", "Liver  Rank"%></th>
+    <th><%= sortable  "org_bucket_4_rank", "Cancer Rank"%></th>
+  
+   
+  </tr>
+
+<% @orgs.each do |org| %>
+  <tr class="<%= cycle('even','odd') %>">
+
+    <td><%= link_to "#{org.orgname}", org_path(org) %></td>
+    <td><%= org.org_bucket_1_rank %></td>
+    <td><%= org.org_bucket_2_rank %></td>
+    <td><%= org.org_bucket_3_rank %></td>
+    <td><%= org.org_bucket_4_rank %></td>
+   
+  
+	
+	<% if can? :update, org %>
+		<td><%= link_to 'Edit', edit_org_path(org) %></td>
+		<td><%= link_to 'Destroy', org, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @orgs %>

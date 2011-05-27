@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hms_piid: MyString
+  first: MyString
+  last: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  phone: MyString
+  specialty: MyString
+  pract_type: MyString
+
+two:
+  hms_piid: MyString
+  first: MyString
+  last: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  phone: MyString
+  specialty: MyString
+  pract_type: MyString

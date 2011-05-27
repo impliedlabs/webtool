@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  indiv_id: 1
+  org_id: 1
+  bucket_1_phys_fac_rank: 1
+  bucket_2_phys_fac_rank: 1
+  bucket_3_phys_fac_rank: 1
+  bucket_4_phys_fac_rank: 1
+  bucket_1_workload: 1
+  bucket_2_workload: 1
+  bucket_3_workload: 1
+  bucket_4_workload: 1
+
+two:
+  indiv_id: 1
+  org_id: 1
+  bucket_1_phys_fac_rank: 1
+  bucket_2_phys_fac_rank: 1
+  bucket_3_phys_fac_rank: 1
+  bucket_4_phys_fac_rank: 1
+  bucket_1_workload: 1
+  bucket_2_workload: 1
+  bucket_3_workload: 1
+  bucket_4_workload: 1
