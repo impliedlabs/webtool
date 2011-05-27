@@ -74,20 +74,19 @@
 		<div class="grid_4">
 			<div id="sidebar">
 			
-			<%= render 'indiv_search' %>
+			<%= render 'indivs/indiv_search' %>
 			
-			<div id = "links" class = "right">
+			<div id = "links" >
 				
-				<p>
-				<%= link_to "Territories", indivs_path %> 
+				
+				
+				<%= link_to "Territories", indivs_path %>  |
 			
-				</p>
-				<p>
-				<%= link_to "Stats/Reports", orgs_path %>
-				</p>
-				<p>
+				
+				
+				
 				<%= link_to "Account Settings", edit_user_registration_path %>
-				</p>
+				
 			</div>
 		</div>
 	
