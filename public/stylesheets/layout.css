@@ -421,6 +421,7 @@ background: #4a0000;
 font-weight: bold;
 -moz-border-radius: 5px;
 border-radius: 5px;
+cursor: pointer;
 }
 
 .button_red:hover{
