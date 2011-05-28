@@ -1,5 +1,7 @@
 <table id="indivs_table">
-  <tr>
+ 
+	<%= will_paginate @indivs %>
+	 <tr>
     
     <th> <%= sortable "first", "First"%></th>
     <th><%= sortable "last", "Last" %></th>
@@ -29,4 +31,4 @@
 <% end %>
 </table>
 
-<%= will_paginate @indivs %>
+

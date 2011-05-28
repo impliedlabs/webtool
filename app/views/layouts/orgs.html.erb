@@ -41,7 +41,7 @@
 				
 			</h1>
 		
-					<div class="right" style="font-size: 12px;">
+					<div id="user_nav" style="font-size: 12px;">
 				<% if user_signed_in? %>  
 							Signed in as <%= current_user.email %>.  
 							<%= link_to "Sign out", destroy_user_session_path %>  
@@ -78,15 +78,15 @@
 				
 				<br/>
 				
-			<div id = "links" class = "right">
+			<div id = "links">
 			
-				<%= link_to "Territories", indivs_path %> 
+				<%= link_to "Territories", indivs_path %> |
 			
 				
 			
-				<p>
+				
 				<%= link_to "Account Settings", edit_user_registration_path %>
-				</p>
+				
 			</div>
 		</div>
 	
