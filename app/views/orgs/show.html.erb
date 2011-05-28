@@ -2,61 +2,63 @@
 
 <div id="org_details">
 
-	<div class = "right">
 
-		<b> Affiliated Practitioners </b>
+<!-- affiliation information -->
+	<div class = "right">
+		<p>
+		<%= link_to 'Go Back >>', orgs_path %>
+		</p>
+		<br/>
+
+		<b class="red"> Affiliated Practitioners </b>
 		<% @indivs.each do |indiv| %>
 				<p><%= link_to "#{indiv.first}," + " " + "#{indiv.last}", indiv_path(indiv) %> </p>
 		<% end %>
-	
-
 	</div>
 	
+	
+	
+<!--  Org Info -->
 	<p>
-	  <b>Hms POID:</b>
+	  <b class="red">Hms POID:</b>
 	  <%= @org.hms_poid %>
-
 	</p>
 	
 	<p>
-
-	  <b>Orginization Name:</b>
+	<b class="red">Orginization Name:</b>
 	  <%= @org.orgname %>
 	</p>
 
 
 
 	<p>
-	  <b>Address1:</b>
+	  <b class="red">Address1:</b>
 	  <%= @org.address1 %>
 
-
-
-	  <b>Address2:</b>
+	  <b class="red">Address2:</b>
 	  <%= @org.address2 %>
 	</p>
 
 	<p>
-	  <b>City:</b>
+	  <b class="red">City:</b>
 	  <%= @org.city %>
 
-
-
-	  <b>State:</b>
+	  <b class="red">State:</b>
 	  <%= @org.state %>
 	</p>
 
 	<p>
-	  <b>Zipcode:</b>
+	  <b class="red">Zipcode:</b>
 	  <%= @org.zipcode %>
 	</p>
 
 	<p>
-	  <b>Phone:</b>
+	  <b class="red">Phone:</b>
 	  <%= @org.phone %>
 	</p>
 
 
+<!-- Ranking Info -->
 	<table width="40%">
 		<tr>
 			<td>Hypo Rank </td>
@@ -75,6 +77,6 @@
 			
 	</table>
 
-	<%= link_to 'Back', orgs_path %>
+	
 
 </div>

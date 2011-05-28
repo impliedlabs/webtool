@@ -9,10 +9,14 @@ Webtool::Application.routes.draw do
 		get 'territories'
 	end
   end
+  
+  
 
   devise_for :users, :controllers => { :sessions => "users/sessions" }
 
   resources :indivs
+  
+  resources :territories
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

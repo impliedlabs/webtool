@@ -129,7 +129,7 @@ min-height: 400px;
 }
 
 #indiv_details{
-border: 2px solid #444;
+
 padding:10px;
 border-radius: 5px;
 -moz-border-radius: 5px;
@@ -137,7 +137,7 @@ min-height: 450px;
 }
 
 #org_details{
-border: 2px solid #444;
+
 padding:10px;
 border-radius: 5px;
 -moz-border-radius: 5px;
@@ -443,7 +443,7 @@ background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
 
 .green{ color: #006e2e;}
 
-.red { color: #ac1315;}
+.red { color: #880000; /*#ac1315;*/}
 
 .dark_blue {#222C4A;}
 
