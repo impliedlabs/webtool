@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110525010445) do
+ActiveRecord::Schema.define(:version => 20110529011204) do
 
   create_table "add_buckets_to_orgs", :force => true do |t|
     t.integer  "org_bucket_1_rank"
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(:version => 20110525010445) do
 
   create_table "territories", :force => true do |t|
     t.integer  "zipcode"
-    t.integer  "terr_code"
+    t.string   "terr_code"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
