@@ -19,6 +19,7 @@
 <!-- Begin Container -->
 <div class="container_12">
 
+<!-- Begin Header -->
 	<div class="grid_12">
 		<div id="header">
 
@@ -29,29 +30,24 @@
 				<li><a href="/indivs"> Practitioners </a> </li>
 				<li><a href="/orgs"> Organizations </a> </li>
 				<li><a href=""> Help </a> </li>
-				
-				
 			</ul>
 		
 				
 			<h1 id="branding">
 				<%= image_tag('hms_logo.gif') %> 
-				
-			
-				
 			</h1>
 		
 					<div id="user_nav" style="font-size: 12px;">
-				<% if user_signed_in? %>  
-							Signed in as <%= current_user.email %>.  
-							<%= link_to "Sign out", destroy_user_session_path %>  
+							<% if user_signed_in? %>  
+								Signed in as <%= current_user.email %>.  
+								<%= link_to "Sign out", destroy_user_session_path %>  
 						  <% else %>  
 							<p> </p>  
 					<% end %>  
 				</div>	
 		</div>
 				
-</div>
+	</div>
 
 
 
@@ -77,24 +73,21 @@
 			<%= render 'indivs/indiv_search' %>
 			
 			<div id = "links" >
+				<p>
+					<%= link_to "Territories", territories_path %>  
+				</p>
 				
-				
-				
-				<%= link_to "Territories", territories_path %>  |
-			
-				
-				
-				
-				<%= link_to "Account Settings", edit_user_registration_path %>
-				
+				<p>
+					<%= link_to "Account Settings", edit_user_registration_path %>
+				</p>
 			</div>
 		</div>
 	
 	
-</div>
-	
+	</div>
+	<!-- end sidebar -->
 
-
+<!-- end main -->
 </div>
 
 
@@ -103,7 +96,7 @@
 <div class="clear"></div>
 
 
-<!--end of hidden divs displaying column sizes. Begin templates and prototypes for forms, accordions, jquery, etc -->
+
 
 
 <!-- begin footer -->
@@ -111,8 +104,8 @@
 	
 	
 <div class="box">
-	<p>Copyright 2010 HealthMarket Science </p>
-\
+	<p>Copyright 2011 HealthMarket Science </p>
+
 </div>
 </div>
 <div class="clear"></div>

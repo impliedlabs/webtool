@@ -42,7 +42,7 @@
 			</h1>
 		
 					<div id="user_nav" style="font-size: 12px;">
-				<% if user_signed_in? %>  
+						<% if user_signed_in? %>  
 							Signed in as <%= current_user.email %>.  
 							<%= link_to "Sign out", destroy_user_session_path %>  
 						  <% else %>  
@@ -51,7 +51,7 @@
 				</div>	
 		</div>
 				
-</div>
+	</div>
 
 
 
@@ -74,34 +74,26 @@
 		<div class="grid_4">
 			<div id="sidebar">
 			
-			<%= render 'org_search' %>
+				<%= render 'org_search' %>
 				
 				<br/>
 				
-			<div id = "links">
+				<div id = "links">
+					<p>
+						<%= link_to "Territories", territories_path %> 
+					</p>
 				
-				
-					
-					
-				
-				
-				<p>
-			
-				<%= link_to "Territories", territories_path %> 
-			
-				</p>
-			
-				<p>
-				<%= link_to "Account Settings", edit_user_registration_path %>
-				</p>
-			</div>
+					<p>
+						<%= link_to "Account Settings", edit_user_registration_path %>
+					</p>
+				</div>
 		</div>
 	
 	
-</div>
-	
+	</div>
+	<!-- end sidebar -->
 
-
+	<!-- end main -->
 </div>
 
 
@@ -110,7 +102,6 @@
 <div class="clear"></div>
 
 
-<!--end of hidden divs displaying column sizes. Begin templates and prototypes for forms, accordions, jquery, etc -->
 
 
 <!-- begin footer -->
@@ -118,8 +109,7 @@
 	
 	
 <div class="box">
-	<p>Copyright 2010 HealthMarket Science </p>
-\
+	<p>Copyright 2011 HealthMarket Science </p>
 </div>
 </div>
 <div class="clear"></div>
