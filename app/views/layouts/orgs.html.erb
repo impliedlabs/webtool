@@ -13,6 +13,39 @@
 <!--[if IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen" /><![endif]-->
 </head>
 
+<script type="text/javascript">
+
+/**
+ * The following variables may be adjusted
+ */
+var active_color = '#000'; // Colour of user provided text
+var inactive_color = '#ccc'; // Colour of default text
+
+/**
+ * No need to modify anything below this line
+ */
+
+$(document).ready(function() {
+  $("input.default-value").css("color", inactive_color);
+  var default_values = new Array();
+  $("input.default-value").focus(function() {
+    if (!default_values[this.id]) {
+      default_values[this.id] = this.value;
+    }
+    if (this.value == default_values[this.id]) {
+      this.value = '';
+      this.style.color = active_color;
+    }
+    $(this).blur(function() {
+      if (this.value == '') {
+        this.style.color = inactive_color;
+        this.value = default_values[this.id];
+      }
+    });
+  });
+});
+</script>
+
 <body>
 
 

@@ -2,7 +2,7 @@
 	<%= hidden_field_tag :direction, params[:direction] %>  
 	<%= hidden_field_tag :sort, params[:sort] %>
 	<p>
-		<%= text_field_tag :search, params[:search], :id => "search_bar"%>
-		<input type = "submit" value="Search" class="button_black">
+		<%= text_field_tag :search, params[:search], :id => "search_bar", :class => "default-value", :value => "Search for a keyword, city, state or zip" %>
+		<input type = "submit" value="Search Practitioners" class="button_red">
 	</p>
 <% end %>

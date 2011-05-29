@@ -8,8 +8,9 @@
 <!-- affiliation info -->
 	<div class="right">
 		<p>
-	    	<%= link_to 'Go Back >>' , indivs_path %>
+	    	<%= link_to 'Go Back >>' , indivs_path, :class => "red" %>
 	     </p>
+	     <br/>
 		<b class ="red"> Organizations: </b>
 	
 		<% @orgs.each do |org| %>
@@ -22,8 +23,7 @@
 
 
 <!-- practitioner info -->
-	  <b class="red">Hms piid:</b>
-	  		<%= @indiv.hms_piid %>
+	  <h2 class="title">Practitioner Information </h2>
 	
 		<p>
 		  <b class="red">First Name:</b>

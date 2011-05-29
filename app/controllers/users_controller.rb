@@ -1,5 +1,6 @@
-class Users < Devise::SessionsController
+class Users  < Devise::SessionsController
 
-layout 'home_ltr;
+layout 'home_ltr'
+
 
 end
