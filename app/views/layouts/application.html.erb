@@ -59,9 +59,7 @@ $(document).ready(function() {
 					
 
 			<ul class="nav">
-				<li><a href="/"> Home </a> </li>
-				<li><a href="/indivs"> Practitioners </a> </li>
-				<li><a href="/orgs"> Organizations </a> </li>
+				<li> <%= link_to "Account Settings", edit_user_registration_path %> </li>
 				<li><a href=""> Help </a> </li>
 			</ul>
 		
@@ -105,19 +103,27 @@ $(document).ready(function() {
 			
 			<%= render 'indivs/indiv_search' %>
 			
-			<div id = "links" >
-				<p>
+		
+				<div class="box" >
 					<%= link_to "Territories", territories_path %>  
-				</p>
+				</div>
+		
 				
-				<p>
-					<%= link_to "Account Settings", edit_user_registration_path %>
-				</p>
+				
+			
+				<div class="box">
+					<%= link_to "Practitioners", indivs_path %>
+				</div>
+		
+				<div class="box">
+					<%= link_to "Organizations", orgs_path %>
+				</div>
+				
 			</div>
 		</div>
 	
 	
-	</div>
+
 	<!-- end sidebar -->
 
 <!-- end main -->
@@ -143,9 +149,5 @@ $(document).ready(function() {
 </div>
 <div class="clear"></div>
 </div>
-<%= yield :scripts %>
-<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.js"></script>
-<script type="text/javascript" src="js/jquery-fluid16.js"></script>
-</body>
+
 </html>

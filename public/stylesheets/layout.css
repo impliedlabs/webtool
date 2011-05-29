@@ -221,6 +221,10 @@ border-collapse: collapse;
 color: #000; /*#4a0000*/;
 font-weight:normal;
 }
+
+#indivs_table a:hover{
+	color: #880000;
+}
 #indivs_table th{
 border: 1px solid #444;
 background: #a90329; /* Old browsers */
@@ -260,22 +264,20 @@ color: #fff;
 
 .even {
 background: #fff;
-
 }
 
 .odd {
 background: #FFE3C9;
-
 }
+
 #indivs_table td{
 padding: 4px;
 border: 1px solid #444;
 }
 
-#indivs_table tr:hover{
+#indivs_table tr:hover, #indivs_table td:hover{
 background: #E5B259;
-
-
+color: #880000;
 }
 
 #orgs_table{
