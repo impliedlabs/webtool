@@ -449,6 +449,16 @@ background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
 
 .dark_blue {#222C4A;}
 
+
+.notice{
+	color: green;
+	
+}
+
+.alert{
+	color: red;
+}
+
 /* boxes
 ----------------------------------------------- */
 .box {
