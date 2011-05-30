@@ -103,25 +103,28 @@ $(document).ready(function() {
 			
 				<%= render 'indivs/indiv_search' %>
 			
-				<div class="links">
-			    
+			<!-- Begin Nav Links -->
 					<div class="square" >
-						<%= link_to "Territories", territories_path %>  
 						<%= image_tag('map.png')%>
+						<%= link_to "Territories", territories_path %>  
 					</div>
 				
 					<div class="square">
-						<%= link_to "Practitioners", indivs_path %>
 						<%= image_tag('user.png')%>
-					</div>
-				  
-			
-					<div class="square">
-						<%= link_to "Organizations", orgs_path %>
-						<%= image_tag('building.png')%>
+						<%= link_to "Practitioners", indivs_path %>	
 					</div>
 				
-				</div>
+				 
+				
+					<div class="square">
+						<%= image_tag('building.png')%>
+						<%= link_to "Organizations", orgs_path %>
+					</div>
+					
+						<div class="square">
+							<%= image_tag('stats.png')%>
+							<%= link_to "Reports", orgs_path %>
+						</div>	
 				
 			</div>
 		</div>
