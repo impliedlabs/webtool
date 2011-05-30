@@ -45,7 +45,31 @@
 		Territory.import territories
 	end
 		
-		
+	desc "Update Indivs"
+		task :update_indivs => :environment do
+			Indiv.all.each do |indiv|
+				firsts = ['Bill', 'Ted', 'Andy', 'Tim', 'Emir', 'Kevin', 'Matthew', 'Bill']
+				lasts = ['Stevens', 'Jeffreos', 'Davis', 'Wilkins', 'Smith', 'Knight', 'Murphy', 'Jones']
+				
+				rand_first = firsts[rand(firsts.length)]
+				rand_last = lasts[rand(lasts.length)]
+				indiv.update_attributes(:first => rand_first, :last => rand_last, :phone => '327-782-2104')
+			end	
+		end
+	
+	desc "Update Orgs"
+		task :update_orgs => :environment do
+			Org.all.each do |org|
+				orgnames=['Frank White Hospital', 'Manheim Clinic', 'Altoona Academy', 'County Memorial', 'United Imaging', 'University Trauma', 'City Surgical Center', 'Bayside Clinic', 'Alan Jaffrey Practice', 'Tim Toady MD', 'Mountain View Hospital', 'El Dorado Hospital']
+				phones = ['337-286-9127', '610-999-4886', '610-789-7897', '555-5211', '392-227-6912', '486-290-7723', '212-359-5436']
+				
+				rand_orgname = orgnames[rand(orgnames.length)]
+				rand_phone = phones[rand(phones.length)]
+				
+				org.update_attributes(:orgname => rand_orgname, :phone => rand_phone)
+			end
+		end
+			
 		
 		
 		
