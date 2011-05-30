@@ -2,6 +2,10 @@ Webtool::Application.routes.draw do
  
 
 
+  get "pages/help"
+
+  get "pages/contact"
+
   get "reports/index"
 
   get "report/index"
@@ -21,6 +25,9 @@ Webtool::Application.routes.draw do
   resources :territories
   
   resources :reports
+  
+  match 'help' => 'pages#help', :as => 'help'
+  match 'contact' => 'pages#contact', :as => 'contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
