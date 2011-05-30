@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110529011204) do
+ActiveRecord::Schema.define(:version => 20110530042534) do
 
   create_table "add_buckets_to_orgs", :force => true do |t|
     t.integer  "org_bucket_1_rank"
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(:version => 20110529011204) do
     t.integer  "bucket_4_rank"
   end
 
+  add_index "indivs", ["bucket_1_rank"], :name => "index_indivs_on_bucket_1_rank"
+  add_index "indivs", ["bucket_2_rank"], :name => "index_indivs_on_bucket_2_rank"
+  add_index "indivs", ["bucket_3_rank"], :name => "index_indivs_on_bucket_3_rank"
+  add_index "indivs", ["bucket_4_rank"], :name => "index_indivs_on_bucket_4_rank"
+  add_index "indivs", ["city"], :name => "index_indivs_on_city"
+  add_index "indivs", ["first"], :name => "index_indivs_on_first"
+  add_index "indivs", ["last"], :name => "index_indivs_on_last"
+  add_index "indivs", ["zip"], :name => "index_indivs_on_zip"
+
   create_table "installs", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
@@ -91,6 +100,14 @@ ActiveRecord::Schema.define(:version => 20110529011204) do
     t.boolean  "gmaps"
   end
 
+  add_index "orgs", ["city"], :name => "index_orgs_on_city"
+  add_index "orgs", ["org_bucket_1_rank"], :name => "index_orgs_on_org_bucket_1_rank"
+  add_index "orgs", ["org_bucket_2_rank"], :name => "index_orgs_on_org_bucket_2_rank"
+  add_index "orgs", ["org_bucket_3_rank"], :name => "index_orgs_on_org_bucket_3_rank"
+  add_index "orgs", ["org_bucket_4_rank"], :name => "index_orgs_on_org_bucket_4_rank"
+  add_index "orgs", ["orgname"], :name => "index_orgs_on_orgname"
+  add_index "orgs", ["zipcode"], :name => "index_orgs_on_zipcode"
+
   create_table "pxdxes", :force => true do |t|
     t.integer  "indiv_id"
     t.integer  "org_id"
@@ -105,6 +122,9 @@ ActiveRecord::Schema.define(:version => 20110529011204) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pxdxes", ["indiv_id"], :name => "index_pxdxes_on_indiv_id"
+  add_index "pxdxes", ["org_id"], :name => "index_pxdxes_on_org_id"
 
   create_table "territories", :force => true do |t|
     t.integer  "zipcode"
