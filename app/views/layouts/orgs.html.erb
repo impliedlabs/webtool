@@ -111,9 +111,9 @@ $(document).ready(function() {
 				
 				
 				<!--Begin Nav Links -->
-					<div class="square" >
-						<%= image_tag('map.png')%>
-						<%= link_to "Territories", territories_path %>  
+						<div class="square">
+						<%= image_tag('building.png')%>
+						<%= link_to "Organizations", orgs_path %>
 					</div>
 				
 					<div class="square">
@@ -121,17 +121,15 @@ $(document).ready(function() {
 						<%= link_to "Practitioners", indivs_path %>	
 					</div>
 				
-				 
-				
-					<div class="square">
-						<%= image_tag('building.png')%>
-						<%= link_to "Organizations", orgs_path %>
+					<div class="square" >
+						<%= image_tag('map.png')%>
+						<%= link_to "Territories", territories_path %>  
 					</div>
-					
-						<div class="square">
+				 
+					<div class="square">
 							<%= image_tag('stats.png')%>
-							<%= link_to "Reports", orgs_path %>
-						</div>	
+							<%= link_to "Reports", reports_path %>
+						</div>
 				
 				</div>
 		</div>
