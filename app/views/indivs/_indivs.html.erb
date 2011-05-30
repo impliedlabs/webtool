@@ -23,10 +23,7 @@
     <td><%= indiv.bucket_4_rank %></td>
    
    
-	<% if can? :update, indiv %>
-		 <td><%= link_to 'Edit', edit_indiv_path(indiv) %></td>
-		<td><%= link_to 'Destroy', indiv, :confirm => 'Are you sure?', :method => :delete %></td>
-	<% end %>
+
   </tr>
 <% end %>
 </table>

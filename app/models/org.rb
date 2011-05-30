@@ -1,6 +1,7 @@
 class Org < ActiveRecord::Base
 	has_many :pxdxes
 	has_many :indivs, :through => :pxdxes
+	belongs_to :territory
 	
 	
 	cattr_reader :per_page

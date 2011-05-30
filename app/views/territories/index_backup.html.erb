@@ -1,0 +1,26 @@
+<h1> Territories </h1>
+
+
+
+<p> Your Territory ID is <%= @territory.terr_code %> </p>
+
+<div class="grid_4">
+	
+	<p>Practitioners </p>
+	<% @indivs.each do |indiv| %>
+		<%= indiv.first %>
+		<%= indiv.last %>
+	<% end %>
+</div>
+
+
+<div class="grid_4">
+	<p>Organizations </p>
+	<% if @orgs.empty?%>
+		<p> No Organizations in your territory </p>
+	<% else %>
+		<% @orgs.each do |indiv| %>
+			<%= org.orgname %>
+		<% end %>
+	<% end %>
+</div>

@@ -9,4 +9,8 @@ class TerritoriesController < ApplicationController
 		@orgs = Org.find_all_by_zipcode(@zipcode)
 		
 	end
+	
+private
+  
+
 end
