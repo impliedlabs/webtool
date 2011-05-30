@@ -7,6 +7,8 @@ class OrgsController < AuthorizedController
   helper_method :sort_column, :sort_direction
   caches_action :index
   
+  autocomplete :org, :orgname
+  
   def index
     @orgs = Org.search(params[:search]).order(sort_column + ' '+ sort_direction).paginate(:per_page => 20, :page => params[:page])
 

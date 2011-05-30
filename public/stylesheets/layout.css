@@ -160,7 +160,6 @@ min-height: 400px;
 #links {
 float: right;
 padding: 10px;
-
 border-radius: 5px;
 -moz-border-radiusL 5px;
 width: 90%;
@@ -399,6 +398,7 @@ background: #000;
 font-weight: bold;
 -moz-border-radius: 5px;
 border-radius: 5px;
+border: 1px #444;
 }
 
 .button_black:hover{ cursor: pointer; background: #45484d; /* Old browsers */
@@ -454,6 +454,14 @@ background: linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
 
 .alert{
 	color: red;
+}
+
+.square{
+	border: 1px #444;
+	padding: 10px;
+	float: left;
+	display: inline;
+	width: 150px;
 }
 
 /* boxes

@@ -4,6 +4,8 @@ class IndivsController < AuthorizedController
   helper_method :sort_column, :sort_direction
   caches_action :index
   
+  
+  
   def index
     @indivs = Indiv.search(params[:search]).order(sort_column + ' '+ sort_direction).paginate(:per_page => 20, :page => params[:page])
 	

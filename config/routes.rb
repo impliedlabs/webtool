@@ -5,9 +5,7 @@ Webtool::Application.routes.draw do
   resources :clients
 
   resources :orgs do
-	collection do
-		get 'territories'
-	end
+	get :autocomplete_orgname, :on => :collection
   end
   
   
