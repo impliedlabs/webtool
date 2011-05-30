@@ -13,13 +13,14 @@
 <!--[if IE 7]><link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen" /><![endif]-->
 </head>
 
+<!-- load script for default text in search bar -->
 <script type="text/javascript">
 
 /**
  * The following variables may be adjusted
  */
 var active_color = '#000'; // Colour of user provided text
-var inactive_color = '#ccc'; // Colour of default text
+var inactive_color = '#444'; // Colour of default text
 
 /**
  * No need to modify anything below this line
@@ -58,12 +59,8 @@ $(document).ready(function() {
 					
 
 			<ul class="nav">
-				<li><a href="/"> Home </a> </li>
-				<li><a href="/indivs"> Practitioners </a> </li>
-				<li><a href="/orgs"> Organizations </a> </li>
+				<li> <%= link_to "Account Settings", edit_user_registration_path %> </li>
 				<li><a href=""> Help </a> </li>
-				
-				
 			</ul>
 		
 				
@@ -112,13 +109,19 @@ $(document).ready(function() {
 				<br/>
 				
 				<div id = "links">
-					<p>
-						<%= link_to "Territories", territories_path %> 
-					</p>
+				    
+					<div class="box" >
+						<%= link_to "Territories", territories_path %>  
+					</div>
 				
-					<p>
-						<%= link_to "Account Settings", edit_user_registration_path %>
-					</p>
+					<div class="box">
+						<%= link_to "Practitioners", indivs_path %>
+					</div>
+				  
+			
+					<div class="box">
+						<%= link_to "Organizations", orgs_path %>
+					</div>
 				</div>
 		</div>
 	

@@ -18,7 +18,7 @@
  * The following variables may be adjusted
  */
 var active_color = '#000'; // Colour of user provided text
-var inactive_color = '#ccc'; // Colour of default text
+var inactive_color = '#444'; // Colour of default text
 
 /**
  * No need to modify anything below this line
@@ -101,22 +101,23 @@ $(document).ready(function() {
 		<div class="grid_4">
 			<div id="sidebar">
 			
-			<%= render 'indivs/indiv_search' %>
+				<%= render 'indivs/indiv_search' %>
 			
-		
-				<div class="box" >
-					<%= link_to "Territories", territories_path %>  
-				</div>
-		
+				<div class = "links">
+			    
+					<div class="box" >
+						<%= link_to "Territories", territories_path %>  
+					</div>
 				
-				
+					<div class="box">
+						<%= link_to "Practitioners", indivs_path %>
+					</div>
+				  
 			
-				<div class="box">
-					<%= link_to "Practitioners", indivs_path %>
-				</div>
-		
-				<div class="box">
-					<%= link_to "Organizations", orgs_path %>
+					<div class="box">
+						<%= link_to "Organizations", orgs_path %>
+					</div>
+				
 				</div>
 				
 			</div>
