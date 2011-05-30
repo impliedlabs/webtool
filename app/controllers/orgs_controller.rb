@@ -5,6 +5,7 @@ class OrgsController < AuthorizedController
   layout 'orgs'
   
   helper_method :sort_column, :sort_direction
+  caches_action :index
   
   def index
     @orgs = Org.search(params[:search]).order(sort_column + ' '+ sort_direction).paginate(:per_page => 20, :page => params[:page])
