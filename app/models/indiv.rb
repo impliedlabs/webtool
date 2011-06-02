@@ -10,7 +10,7 @@ class Indiv < ActiveRecord::Base
 	
 	def self.search(search)  
 	  if search  
-		where('first LIKE ? OR last LIKE ? OR zip LIKE ? or city like ?', "%#{search}%", "%#{search}%" ,"%#{search}%", "%#{search}%",)
+		where('first LIKE ? OR last LIKE ? OR zip LIKE ? or city like ?', "%#{search}%", "%#{search}%" ,"%#{search}%", "%#{search}%")
 	  else  
 		scoped 
 	  end  
