@@ -11,7 +11,7 @@
 	    	<%= link_to 'Go Back >>' , indivs_path, :class => "red" %>
 	     </p>
 	     <br/>
-		<b class ="red"> Organizations: </b>
+		<b class ="red"> Affiliated Organizations: </b>
 	
 		<% @orgs.each do |org| %>
 		
@@ -73,25 +73,28 @@
 		  <%= @indiv.specialty %>
 		</p>
 	
-	<!-- ranking data -->
 
-		<table width="40%">
-			<tr>
-				<td class=>Hypo Rank </td>
-				<td> <%= @indiv.bucket_1_rank %> </td>
-			</tr>
-			<tr>
-				<td>Ortho </td>
-				<td> <%= @indiv.bucket_2_rank %> </td>
-			</tr>
-				<td>Liver Rank </td>
-				<td> <%= @indiv.bucket_3_rank %> </td>
-			<tr>
-				<td>Cancer Rank </td>
-				<td> <%= @indiv.bucket_4_rank %> </td>
-			</tr>
-				
-		</table>
+<!-- Ranking Info -->
+	<table width="25%" id="buckets_table">
+		<tr>
+			<th>Hypo Rank </th>
+			<th>Ortho Rank</th>
+			<th>Liver Rank </th>
+			<th>Cancer Rank </th>
+			
+		</tr>
+		<tr>
+			<td> <%= @indiv.bucket_1_rank %> </td>
+			<td> <%= @indiv.bucket_2_rank %> </td>
+			<td> <%= @indiv.bucket_3_rank %> </td>
+			<td> <%= @indiv.bucket_4_rank %> </td>
+			
+		<tr>
+			
+			
+		</tr>
+			
+	</table>
 	
 	
 

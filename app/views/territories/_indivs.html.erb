@@ -1,0 +1,20 @@
+<div class="grid_5">
+	<b class="red"> Practitioners </b>
+	
+		<table width ="100%">
+		
+			
+			<% @indivs.each do |indiv| %>
+					<tr class="<%= cycle('even','odd') %>">
+					    <td><%= link_to "#{indiv.first}", indiv_path(indiv) %></td>
+					    <td><%= link_to "#{indiv.last}", indiv_path(indiv) %></td>
+					    <td><%= indiv.bucket_1_rank %></td>
+					    <td><%= indiv.bucket_2_rank %></td>
+					    <td><%= indiv.bucket_3_rank %></td>
+					    <td><%= indiv.bucket_4_rank %></td>
+					    
+		   			</tr>
+   				</table>
+			<% end %>
+	
+</div>

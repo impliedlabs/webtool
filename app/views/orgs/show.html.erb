@@ -12,7 +12,7 @@
 
 		<b class="red"> Affiliated Practitioners </b>
 		<% @indivs.each do |indiv| %>
-				<p><%= link_to "#{indiv.first}," + " " + "#{indiv.last}", indiv_path(indiv) %> </p>
+				<p><%= link_to "#{indiv.first}" + " " + "#{indiv.last}", indiv_path(indiv) %> </p>
 		<% end %>
 	</div>
 	
@@ -56,20 +56,23 @@
 
 
 <!-- Ranking Info -->
-	<table width="40%">
+	<table id="buckets_table">
 		<tr>
-			<td>Hypo Rank </td>
+			<th>Hypo Rank </th>
+			<th>Ortho Rank</th>
+			<th>Liver Rank </th>
+			<th>Cancer Rank </th>
+			
+		</tr>
+		<tr>
 			<td> <%= @org.org_bucket_1_rank %> </td>
-		</tr>
-		<tr>
-			<td>Ortho </td>
 			<td> <%= @org.org_bucket_2_rank %> </td>
-		</tr>
-			<td>Liver Rank </td>
 			<td> <%= @org.org_bucket_3_rank %> </td>
-		<tr>
-			<td>Cancer Rank </td>
 			<td> <%= @org.org_bucket_4_rank %> </td>
+			
+		<tr>
+			
+			
 		</tr>
 			
 	</table>

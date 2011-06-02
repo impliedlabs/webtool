@@ -4,47 +4,8 @@
 
 <p> Your Territory ID is <b><%= @territory.terr_code %></b> </p>
 
-<div class="grid_5">
-	<b class="red"> Practitioners </b>
-	
-		<table width ="100%">
-		
-			
-			<% @indivs.each do |indiv| %>
-					<tr class="<%= cycle('even','odd') %>">
-					    <td><%= link_to "#{indiv.first}", indiv_path(indiv) %></td>
-					    <td><%= link_to "#{indiv.last}", indiv_path(indiv) %></td>
-					    <td><%= indiv.bucket_1_rank %></td>
-					    <td><%= indiv.bucket_2_rank %></td>
-					    <td><%= indiv.bucket_3_rank %></td>
-					    <td><%= indiv.bucket_4_rank %></td>
-					    
-		   			</tr>
-   				</table>
-			<% end %>
-	
-</div>
+<%= render 'indivs' %>
 
 
-<div class="grid_5">
-	<b class="red">Organizations </b>
-	<% if @orgs.empty?%>
-		<p> No Organizations in current territory </p>
-	<% else %>
-		<table width ="100%">
-				<tr>
-					<th> Org Name </th>
-				</tr>
-				
-				<%= @orgs.each do |org| %>
-					<tr class="<%= cycle('even','odd') %>">
-				  	  <td><%= link_to "#{org.orgname}", indiv_path(indiv) %></td>
-				    </tr>
-				    
-				</table>
-					
-			<% end %>
+<%= render 'orgs' %>
 			
-		<% end %>
-			
-</div>

@@ -1,0 +1,22 @@
+<div class="grid_5">
+	<b class="red">Organizations </b>
+	<% if @orgs.empty?%>
+		<p> No Organizations in current territory </p>
+	<% else %>
+		<table width ="100%">
+				<tr>
+					<th> Org Name </th>
+				</tr>
+				
+				<%= @orgs.each do |org| %>
+					<tr class="<%= cycle('even','odd') %>">
+				  	  <td><%= link_to "#{org.orgname}", indiv_path(indiv) %></td>
+				    </tr>
+				    
+				</table>
+					
+			<% end %>
+			
+		<% end %>
+			
+</div>
